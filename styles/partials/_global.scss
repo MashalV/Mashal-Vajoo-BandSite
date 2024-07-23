@@ -1,11 +1,17 @@
-@use './typography' as *; 
-@use './mixins' as *; 
-@use './variables' as *; 
+@use 'typography' as *;
+@use 'mixins' as *;
+@use 'variables' as *;
+
+$black: #323232; 
+$darkBlack: #000000;
+$silver: #AFAFAF; 
+$white: #FFF;
+$alabaster: #FAFAFA; 
+$mercury: #E1E1E1; 
 
 h1 {
     font-size: 1.5rem;
-    line-height: 2rem;
-    font-family: AvenirNext LT Pro;
+    line-height: 2rem; 
 }
 
 h2 {

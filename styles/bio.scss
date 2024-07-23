@@ -1,4 +1,7 @@
-@use '/styles/partials/global' as *; 
+@use 'partials/global' as *; 
 
-
+.nav {
+    background: $black;
+    color: $white;
+}
 
