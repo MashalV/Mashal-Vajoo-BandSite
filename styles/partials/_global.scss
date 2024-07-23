@@ -1,0 +1,29 @@
+@use './typography' as *; 
+@use './mixins' as *; 
+@use './variables' as *; 
+
+h1 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-family: AvenirNext LT Pro;
+}
+
+h2 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+h3 {
+    font-size: .875rem;
+    line-height: 1.375rem;
+}
+
+p {
+    font-size: .8125rem;
+    line-height: 1.125rem;
+}
+
+a { 
+    font-size: .625rem;
+    line-height: 1.25rem;
+}
