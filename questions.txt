@@ -1,2 +1,2 @@
 typography not pulling into global 
-
+do i have to repull all partials and not just global into my bio 

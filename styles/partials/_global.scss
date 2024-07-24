@@ -1,35 +1,32 @@
-@use 'typography' as *;
-@use 'mixins' as *;
-@use 'variables' as *;
-
-$black: #323232; 
-$darkBlack: #000000;
-$silver: #AFAFAF; 
-$white: #FFF;
-$alabaster: #FAFAFA; 
-$mercury: #E1E1E1; 
+@use './typography';
+@use './mixins' as *;
+@use './variables' as *;
 
 h1 {
     font-size: 1.5rem;
     line-height: 2rem; 
+    font-family: "AvenirNext LT Pro";
 }
 
 h2 {
     font-size: 1.5rem;
     line-height: 2rem;
+    font-family: "AvenirNext LT Pro";
 }
 
 h3 {
     font-size: .875rem;
     line-height: 1.375rem;
+    font-family: 'AvenirNext LT Pro';
 }
 
 p {
     font-size: .8125rem;
     line-height: 1.125rem;
+    font-family: 'AvenirNext LT Pro';
 }
 
-a { 
-    font-size: .625rem;
-    line-height: 1.25rem;
-}
+// a { 
+//     font-size: .625rem;
+//     line-height: 1.25rem;
+// }

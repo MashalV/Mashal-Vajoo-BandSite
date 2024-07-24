@@ -1,7 +1,115 @@
 @use 'partials/global' as *; 
-
+@use 'partials/variables' as *;
+body {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
 .nav {
     background: $black;
-    color: $white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    margin: auto;
+    padding: auto; //how do i make it reach the end of the screen 
+
+    &__logo {
+
+        display: flex;
+        max-height: 20px; 
+        max-width: 120px;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-content: space-between;
+        color: $silver;
+        font-weight: 400;
+        font-style: normal;
+        font-family: 'AvenirNext LT Pro';
+
+        // &--bio {
+        //     font-weight: 600;
+        //     font-style: normal;
+        //     font-family: 'AvenirNext LT Pro';
+        // }
+        // &--shows {
+        //     font-weight: 600;
+        //     font-style: normal;
+        //     font-family: 'AvenirNext LT Pro';
+        // }
+
+    }
+
+
+    & a{
+        color: $white;
+        font-size: 1.5rem;
+        line-height: 2rem;
+        flex-direction: column;
+    
+    }
+
+
+        // &--text {
+
+        // }
 }
 
+
+.hero-banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    background-image: url("../assets/Images/hero-bio.jpg");
+    background-size: cover;
+    background-position: center;
+    min-height: 200px;
+    max-height: 600px;
+    height: 50vh;
+    width: 100%;
+    display: flex; 
+    margin: auto;
+
+    &__title {
+        color: $white;
+        display: flex; 
+        align-content: center;
+        justify-content: center;
+        // margin: 1 rem;
+
+
+    }
+}
+
+.about {
+    padding-top: 24px;
+    padding-bottom: 16px; 
+    display:flex;
+    flex-direction: column;
+    & img {
+        // width: 250px; 
+        // height: 150px ;
+        height: auto;
+        width: auto; 
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+
+
+}
+
+
+.photo {
+    background-color: $mercury;
+    & img{
+    height: auto;
+    width: auto;
+    }
+}
