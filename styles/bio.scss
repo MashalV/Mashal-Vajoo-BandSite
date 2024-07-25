@@ -1,18 +1,20 @@
 @use 'partials/global' as *; 
 @use 'partials/variables' as *;
-body {
-    margin-left: 1rem;
-    margin-right: 1rem;
-}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
 .nav {
     background: $black;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    
-    margin: auto;
-    padding: auto; //how do i make it reach the end of the screen 
+    width: 100%;
 
     &__logo {
 
@@ -22,67 +24,63 @@ body {
         justify-content: center;
         align-items: center;
         flex-direction: column;
-
-
+        margin-top: 1rem;
+            // margin-bottom: 1rem;
     }
 
     &__wrapper {
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-content: space-between;
-        color: $silver;
-        font-weight: 400;
+        color: $mercury;
+        font-weight: 600;
         font-style: normal;
         font-family: 'AvenirNext LT Pro';
+        justify-content:flex-start;
+        width: 100%;
+        font-size: .875rem;
+        line-height: 1.375rem;
 
-        // &--bio {
-        //     font-weight: 600;
-        //     font-style: normal;
-        //     font-family: 'AvenirNext LT Pro';
-        // }
-        // &--shows {
-        //     font-weight: 600;
-        //     font-style: normal;
-        //     font-family: 'AvenirNext LT Pro';
-        // }
+        &--bio {
+            display: flex;
+            width: 50%;
+            justify-content: center;
+            align-items: center;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        &--shows {
+            display: flex;
+            width: 50%;
+            justify-content: center;
+            align-items: center;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
 
     }
 
-
-    & a{
-        color: $white;
-        font-size: 1.5rem;
-        line-height: 2rem;
-        flex-direction: column;
-    
-    }
-
-
-        // &--text {
-
-        // }
 }
 
 
 .hero-banner {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-    background-image: url("../assets/Images/hero-bio.jpg");
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("../assets/Images/hero-bio.jpg");
     background-size: cover;
     background-position: center;
     min-height: 200px;
     max-height: 600px;
-    height: 50vh;
     width: 100%;
     display: flex; 
     margin: auto;
+    
+    
 
     &__title {
         color: $white;
         display: flex; 
-        align-content: center;
-        justify-content: center;
-        // margin: 1 rem;
+        width: 100%;
+        align-items: center;
+        justify-content: flex-start;
+        margin-left: 1rem;
+
 
 
     }
@@ -91,15 +89,33 @@ body {
 .about {
     padding-top: 24px;
     padding-bottom: 16px; 
+    // padding-left: 1 rem;
+    // padding-right: 1 rem;
     display:flex;
     flex-direction: column;
+    & h1 {
+        margin-left: 1rem;
+    }
+    & h3 {
+        margin: 1rem;
+    }
+    & span {
+        margin: 1rem;
+
+    }
+    & p {
+        
+        margin: 1rem;
+        margin-top: 0px;
+    }
+
     & img {
-        // width: 250px; 
-        // height: 150px ;
         height: auto;
-        width: auto; 
+        width: 100%; 
         padding-top: 16px;
         padding-bottom: 16px;
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
 
 
@@ -107,9 +123,58 @@ body {
 
 
 .photo {
-    background-color: $mercury;
-    & img{
-    height: auto;
-    width: auto;
+    background-color: $alabaster;
+    // margin: 1rem;
+
+    & h1 {
+        margin: 1rem;
+        margin-top: 1rem;
+        
     }
+    
+    & img{
+        height: auto;
+        width: 100%; 
+        // margin: 1rem;
+        padding-top: 0px;
+        padding-bottom: 16px;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+.footer {
+    background-color: $black;
+    color: $white;
+    padding: 1rem;
+
+    & p {
+        padding-top: 1rem;
+    }
+
+    &__icons {
+        margin: 1rem, 0;
+        display: flex;
+        width: 30%;
+        justify-content: space-between;
+        align-items: center; 
+        padding-top: 1rem;
+
+        &img {
+            display: flex;
+            height: 23px;
+            width: 23px;
+        }
+    }
+
+    &__logo {
+        display: flex;
+        max-height: 20px; 
+        max-width: 120px;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 2rem;
+    }
+
 }
