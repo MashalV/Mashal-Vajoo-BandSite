@@ -2,44 +2,7 @@
 @use './mixins' as *;
 @use './variables' as *;
 
-body {
-    font-family: "AvenirNext LT Pro"; 
-}
 
-h1 {
-    font-size: 1.5rem;
-    line-height: 2rem; 
-    font-family: "AvenirNext LT Pro";
-    font-weight: 600;
-}
-
-h2 {
-    font-size: 1.5rem;
-    line-height: 2rem;
-    font-family: "AvenirNext LT Pro";
-    font-weight: 600;
-}
-
-h3 {
-    font-size: .875rem;
-    line-height: 1.375rem;
-    font-family: 'AvenirNext LT Pro';
-    font-weight: 600;
-}
-
-span {
-    font-size: .875rem;
-    line-height: 1.375rem;
-    font-family: 'AvenirNext LT Pro';
-    font-style: normal;
-    font-weight: 600;
-}
-
-p {
-    font-size: .8125rem;
-    line-height: 1.125rem;
-    font-family: 'AvenirNext LT Pro';
-}
 
 // a { 
 //     font-size: .625rem;
