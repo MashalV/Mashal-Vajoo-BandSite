@@ -2,12 +2,14 @@
 
 @mixin tablet {
   @media screen and (min-width: $tablet-breakpoint) {
+    transition: ease all .5s;
     @content;
   }
 }
 
 @mixin desktop {
   @media screen and (min-width: $desktop-breakpoint) {
+    transition: ease all .5s;
     @content;
   }
 }

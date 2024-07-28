@@ -32,12 +32,14 @@ h1 {
 }
 @media screen and (min-width: 48rem) {
   h1 {
+    transition: ease all 0.5s;
     font-size: 3.75rem;
     line-height: 4.25rem;
   }
 }
 @media screen and (min-width: 80rem) {
   h1 {
+    transition: ease all 0.5s;
     font-size: 3.75rem;
     line-height: 4.25rem;
   }
@@ -52,12 +54,14 @@ h2 {
 }
 @media screen and (min-width: 48rem) {
   h2 {
+    transition: ease all 0.5s;
     font-size: 2.25rem;
     line-height: 2.75rem;
   }
 }
 @media screen and (min-width: 80rem) {
   h2 {
+    transition: ease all 0.5s;
     font-size: 2.25rem;
     line-height: 2.75rem;
   }
@@ -72,12 +76,14 @@ h3 {
 }
 @media screen and (min-width: 48rem) {
   h3 {
+    transition: ease all 0.5s;
     font-size: 1.5rem;
     line-height: 2rem;
   }
 }
 @media screen and (min-width: 80rem) {
   h3 {
+    transition: ease all 0.5s;
     font-size: 1.5rem;
     line-height: 2rem;
   }
@@ -93,12 +99,14 @@ span {
 }
 @media screen and (min-width: 48rem) {
   span {
-    font-size: 1.5rem;
+    transition: ease all 0.5s;
+    font-size: 2rem;
     line-height: 2rem;
   }
 }
 @media screen and (min-width: 80rem) {
   span {
+    transition: ease all 0.5s;
     font-size: 1.5rem;
     line-height: 2rem;
   }
@@ -113,12 +121,14 @@ p {
 }
 @media screen and (min-width: 48rem) {
   p {
+    transition: ease all 0.5s;
     font-size: 0.875rem;
     line-height: 1.375rem;
   }
 }
 @media screen and (min-width: 80rem) {
   p {
+    transition: ease all 0.5s;
     font-size: 0.875rem;
     line-height: 1.375rem;
   }
@@ -126,21 +136,44 @@ p {
 
 @media screen and (min-width: 48rem) {
   footer {
+    transition: ease all 0.5s;
     font-size: 0.875rem;
     line-height: 1.25rem;
   }
 }
 @media screen and (min-width: 80rem) {
   footer {
+    transition: ease all 0.5s;
     font-size: 0.875rem;
     line-height: 1.25rem;
   }
 }
 
+span {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-family: "AvenirNext LT Pro";
+  font-weight: 600;
+  color: #323232;
+}
+
+a {
+  text-decoration-line: none;
+}
+
 * {
   padding: 0;
   margin: 0;
+  outline: none;
   box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+@media screen and (min-width: 80rem) {
+  html {
+    transition: ease all 0.5s;
+    margin: auto;
+  }
 }
 
 .nav {
@@ -153,9 +186,17 @@ p {
 }
 @media screen and (min-width: 48rem) {
   .nav {
+    transition: ease all 0.5s;
     display: flex;
     height: auto;
     flex-flow: row wrap;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .nav {
+    transition: ease all 0.5s;
+    display: flex;
+    justify-content: left;
   }
 }
 .nav__logo {
@@ -169,14 +210,21 @@ p {
 }
 @media screen and (min-width: 48rem) {
   .nav__logo {
+    transition: ease all 0.5s;
     position: absolute;
-    left: 1.5rem;
+    left: 2.25rem;
     top: 0.1875rem;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .nav__logo {
+    transition: ease all 0.5s;
+    left: 3.9375rem;
   }
 }
 .nav__wrapper {
   display: flex;
-  color: #E1E1E1;
+  color: #AFAFAF;
   font-weight: 600;
   font-style: normal;
   font-family: "AvenirNext LT Pro";
@@ -187,10 +235,18 @@ p {
 }
 @media screen and (min-width: 48rem) {
   .nav__wrapper {
+    transition: ease all 0.5s;
     display: flex;
     height: auto;
     width: 50%;
     flex-flow: row wrap;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .nav__wrapper {
+    transition: ease all 0.5s;
+    width: 50%;
+    justify-content: center;
   }
 }
 .nav__wrapper--bio {
@@ -198,12 +254,29 @@ p {
   width: 50%;
   justify-content: center;
   align-items: center;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.nav__wrapper--bio:hover {
+  color: #FFF;
+  border-bottom: 2px solid #FFF;
+}
+.nav__wrapper--bio:active {
+  color: #FFF;
+  border-bottom: 2px solid #FFF;
+  font-weight: bold;
 }
 @media screen and (min-width: 48rem) {
   .nav__wrapper--bio {
+    transition: ease all 0.5s;
     width: 33%;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .nav__wrapper--bio {
+    transition: ease all 0.5s;
+    width: 17%;
+    justify-content: left;
   }
 }
 .nav__wrapper--shows {
@@ -211,12 +284,29 @@ p {
   width: 50%;
   justify-content: center;
   align-items: center;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.nav__wrapper--shows:hover {
+  color: #FFF;
+  border-bottom: 2px solid #FFF;
+}
+.nav__wrapper--shows:active {
+  color: #FFF;
+  border-bottom: 2px solid #FFF;
+  font-weight: bold;
 }
 @media screen and (min-width: 48rem) {
   .nav__wrapper--shows {
+    transition: ease all 0.5s;
     width: 33%;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .nav__wrapper--shows {
+    transition: ease all 0.5s;
+    width: 17%;
+    justify-content: left;
   }
 }
 
@@ -232,9 +322,18 @@ p {
 }
 @media screen and (min-width: 48rem) {
   .heroBanner {
+    transition: ease all 0.5s;
     background-size: cover;
     min-height: 500px;
     max-height: 1000px;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .heroBanner {
+    transition: ease all 0.5s;
+    background-size: cover;
+    min-height: 1000px;
+    max-height: 1400px;
   }
 }
 .heroBanner__title {
@@ -247,52 +346,138 @@ p {
 }
 @media screen and (min-width: 48rem) {
   .heroBanner__title {
+    transition: ease all 0.5s;
     margin: 2.25rem;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .heroBanner__title {
+    transition: ease all 0.5s;
+    margin: auto;
+    padding: 3.9375rem;
   }
 }
 
 .about {
-  padding-top: 24px;
-  padding-bottom: 16px;
+  padding: 1.5rem 1rem 1rem 1rem;
   display: flex;
   flex-direction: column;
 }
 @media screen and (min-width: 48rem) {
   .about {
-    margin: 2.25rem;
+    transition: ease all 0.5s;
+    margin: 2.25rem 2.25rem 0.5rem 2.25rem;
   }
+}
+@media screen and (min-width: 80rem) {
+  .about {
+    transition: ease all 0.5s;
+    padding: 2.25rem 3.9375rem;
+    margin: 0;
+  }
+}
+.about__text {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+@media screen and (min-width: 48rem) {
+  .about__text {
+    transition: ease all 0.5s;
+    margin-left: 2.25rem;
+    margin-right: 2.25rem;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .about__text {
+    transition: ease all 0.5s;
+    margin: 0rem 3.9375rem;
+  }
+}
+.about__text--paraOne {
+  padding-bottom: 16px;
 }
 @media screen and (min-width: 48rem) {
   .about__text--paraOne {
+    transition: ease all 0.5s;
     width: 48%;
     float: left;
+    margin-right: 1rem;
   }
 }
-.about h1 {
-  margin-left: 1rem;
+@media screen and (min-width: 80rem) {
+  .about__text--paraOne {
+    transition: ease all 0.5s;
+    padding-right: 2rem;
+  }
 }
-.about h3 {
-  margin: 1rem;
+@media screen and (min-width: 80rem) {
+  .about__text--paraTwo {
+    transition: ease all 0.5s;
+    padding-right: 2rem;
+  }
+}
+@media screen and (min-width: 48rem) {
+  .about h3 {
+    transition: ease all 0.5s;
+    margin-left: 2.25rem;
+    margin-right: 2.25rem;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .about h3 {
+    transition: ease all 0.5s;
+    margin-left: 3.9375rem;
+    margin-right: 3.9375rem;
+    width: 60%;
+  }
 }
 .about span {
-  margin: 1rem;
+  padding-top: 16px;
 }
-.about p {
-  margin: 1rem;
-  margin-top: 0px;
+@media screen and (min-width: 48rem) {
+  .about span {
+    transition: ease all 0.5s;
+    margin: 0rem 2.25rem 2.25rem 2.25rem;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .about span {
+    transition: ease all 0.5s;
+    margin-left: 3.9375rem;
+    margin-right: 3.9375rem;
+  }
+}
+@media screen and (min-width: 48rem) {
+  .about p {
+    transition: ease all 0.5s;
+    margin-right: 1rem;
+    margin-top: 0px;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .about p {
+    transition: ease all 0.5s;
+    margin-right: 1rem;
+    padding-top: 0px;
+  }
 }
 .about img {
   height: auto;
   width: 100%;
-  padding-top: 16px;
-  padding-bottom: 16px;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 @media screen and (min-width: 48rem) {
   .about img {
+    transition: ease all 0.5s;
     width: 100%;
     padding: 2.25rem;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .about img {
+    transition: ease all 0.5s;
+    padding: 2.25rem 3.9375rem;
   }
 }
 
@@ -301,20 +486,29 @@ p {
 }
 @media screen and (min-width: 48rem) {
   .photo {
+    transition: ease all 0.5s;
     display: flex;
     flex-flow: row wrap;
-    padding: 1.5rem;
+    padding: 2.25rem 2.25rem 1.5rem 2.25rem;
   }
 }
-.photo h1 {
+@media screen and (min-width: 80rem) {
+  .photo {
+    transition: ease all 0.5s;
+    padding: 2.25rem 3.9375rem;
+  }
+}
+.photo h2 {
   margin: 1rem;
   margin-top: 1rem;
   width: 100%;
 }
-@media screen and (min-width: 48rem) {
-  .photo h1 {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+@media screen and (min-width: 80rem) {
+  .photo h2 {
+    transition: ease all 0.5s;
+    margin: 0px;
+    padding-bottom: 2.25rem;
+    padding-left: 1rem;
   }
 }
 .photo img {
@@ -325,8 +519,15 @@ p {
   padding-left: 1rem;
   padding-right: 1rem;
 }
+.photo img:not(:hover) {
+  filter: grayscale(1);
+}
+.photo img:hover {
+  filter: grayscale(0);
+}
 @media screen and (min-width: 48rem) {
   .photo img {
+    transition: ease all 0.5s;
     width: 33%;
   }
 }
@@ -338,12 +539,19 @@ p {
 }
 @media screen and (min-width: 48rem) {
   .foot {
-    padding: 1.5rem;
+    transition: ease all 0.5s;
+    padding: 2.25rem 2.25rem;
     display: flex;
     flex-flow: row wrap;
   }
 }
-.foot h1 {
+@media screen and (min-width: 80rem) {
+  .foot {
+    transition: ease all 0.5s;
+    padding: 3rem 3.9375rem 2.25rem 3.9375rem;
+  }
+}
+.foot h2 {
   color: #FFF;
 }
 .foot p {
@@ -360,8 +568,17 @@ p {
 }
 @media screen and (min-width: 48rem) {
   .foot__icons {
-    width: 20%;
-    margin-left: 1.5rem;
+    transition: ease all 0.5s;
+    width: 15%;
+    margin-left: 2rem;
+    padding-top: 0;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .foot__icons {
+    transition: ease all 0.5s;
+    width: 10%;
+    margin-left: 2.25rem;
   }
 }
 .foot__iconsimg {
@@ -380,37 +597,79 @@ p {
 }
 @media screen and (min-width: 48rem) {
   .foot__logo {
+    transition: ease all 0.5s;
+    margin-top: 1rem;
     position: absolute;
     right: 2.25rem;
   }
 }
+@media screen and (min-width: 80rem) {
+  .foot__logo {
+    transition: ease all 0.5s;
+    right: 6rem;
+  }
+}
 @media screen and (min-width: 48rem) {
   .foot__details {
+    transition: ease all 0.5s;
     display: flex;
     flex-flow: row wrap;
-    padding: 1.5rem;
+    padding-top: 2.25rem;
+    padding-bottom: 2.25rem;
+    width: 100%;
   }
 }
 @media screen and (min-width: 48rem) {
   .foot__details--1 {
+    transition: ease all 0.5s;
     width: 32%;
     margin-right: 1.5rem;
   }
 }
+@media screen and (min-width: 80rem) {
+  .foot__details--1 {
+    transition: ease all 0.5s;
+    width: 16%;
+    justify-content: flex-start;
+  }
+}
 @media screen and (min-width: 48rem) {
   .foot__details--2 {
+    transition: ease all 0.5s;
     width: 30%;
     margin-right: 1.5rem;
   }
 }
+@media screen and (min-width: 80rem) {
+  .foot__details--2 {
+    transition: ease all 0.5s;
+    width: 16%;
+    justify-content: flex-start;
+  }
+}
 @media screen and (min-width: 48rem) {
   .foot__details--3 {
+    transition: ease all 0.5s;
     width: 30%;
     justify-content: flex-end;
   }
 }
+@media screen and (min-width: 80rem) {
+  .foot__details--3 {
+    transition: ease all 0.5s;
+    width: 16%;
+    justify-content: flex-start;
+  }
+}
 @media screen and (min-width: 48rem) {
   .foot__copy {
-    margin: 1.5rem;
+    transition: ease all 0.5s;
+    padding-bottom: 2.25rem;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .foot__copy {
+    transition: ease all 0.5s;
+    width: 100%;
   }
 }/*# sourceMappingURL=bio.css.map */
