@@ -1,3 +1,0 @@
-
-do i have to repull all partials and not just global into my bio 
-margin for hero not applying?
