@@ -1,85 +1,90 @@
 const comments = [
-    {Name: 'Victor Pinto', Comment: "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains." , Date: "11/02/2023"},
-    {Name: 'Christina Cabera', Comment: "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.", Date: "10/28/2023"},
-    {Name: 'Isaac Tadesse', Comment: "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.", Date: "10/20/2023"},
-]
+  {
+    Name: "Victor Pinto",
+    Comment:
+      "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.",
+    Date: "11/02/2023",
+  },
+  {
+    Name: "Christina Cabera",
+    Comment:
+      "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.",
+    Date: "10/28/2023",
+  },
+  {
+    Name: "Isaac Tadesse",
+    Comment:
+      "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.",
+    Date: "10/20/2023",
+  },
+];
 
-function createCard(commenter) {
-    // <article class="player">
-    //     <h3>Jajuan</h3>
-    //     <span>Goat</span>
-    // </article>
+const commentContainer = document.getElementById("comment-list-container");
+const commentForm = document.getElementById("comment-form");
 
-	// create parent container article and adds class='player'
-    const cardEl = document.createElement('article');
-    cardEl.classList.add('commenter');
 
-	// creates heading with player name
-    const heading = document.createElement('span')
-    heading.innerText = commenter.commenterName;
 
-	// creates span with player nickname
-    const commentEl = document.createElement('p');
-    commentEl.innerText = commenter.comment;
+function displayComment(comment) {
+    const commentEl = createDiv("comment");
+    
 
-	// places heading in article container
-    cardEl.appendChild(heading);
+    const avatarEl = createDiv("comment__avatar");
+    commentEl.append(avatarEl);
 
-	// places nicknameEl in article container
-    cardEl.appendChild(commentEl);
+    const textEl = createDiv("comment__text");
+    commentEl.append(textEl);
 
-	// returns 1 individual card at a time
-    return cardEl
+    const boxEl = createDiv("comment__text--box");
+    textEl.append(boxEl);
+
+    const nameEl = createDiv("comment__text--box--name", comment.Name);
+
+    boxEl.append(nameEl);
+
+    const dateEl = createDiv("comment__text--box--date", comment.Date);
+
+    boxEl.append(dateEl);
+
+
+    const detailsEl = createDiv("comment__text--details", comment.Comment);
+
+    textEl.append(detailsEl);
+
+    
+
+    commentContainer.append(commentEl);
 }
 
-function renderCommenters() {
-	// retrieve #my-players element
-    const myCommentersEl = document.querySelector('#my-commenters')
+function createDiv(className, text = "") {
+    const div = document.createElement("div");
+    div.className = className;
+    div.innerText = text;
+    return div;
+    }
 
-	// clear current html in myPlayerEl
-    myCommentersEl.innerHTML = ""
 
-	// use players array and create a player card for each player
-    commenters.forEach((commenter) => {
-		// player = {playerName: 'Michael Jordan', nickname: "His Airness"}
-        const card = createCommenterCard(Commenter);
-        myCommentersEl.appendChild(card)
-    })
+function renderComments() { 
+    commentContainer.replaceChildren();
+    comments.sort((a,b) => new Date(b.Date)- new Date (a.Date));
+    comments.forEach(displayComment);
 }
 
-function handleFormSubmit(event) {
-	// How do we prevent the default behavior of a form
-	event.preventDefault();
-	// Use log to check values
-	console.log(event.target.commenterName.value);
-	console.log(event.target.comment.value);
+renderComments(); 
+
+commentForm.addEventListener ("submit", (e) => {
+    e.preventDefault();
+
+    const name = e.target.name.value;
+    const comment = e.target.comment.value;
+    const date = new Date().toLocaleDateString();
+    console.log("Name", name);
+    console.log("Comment", comment);
+    const newComment = { Name: name, Comment: comment, Date: date }
+    comments.push(newComment);
 
 
-	const cardData = {
-		playerName: event.target.commenterName.value,
-		nickname: event.target.comment.value
-	}
-
-	// updated our players array 
-	commenter.push(cardData);
-	console.log(commenter);
-	renderCommenters();
-
-	// Lets use the event object to see what are value are so far ie: event.target.fullName.value
-	// Organized data into a new object called cardData 
-
-	// push the cardData object onto the existing players array
-
-	// Basic Validation 
-	// Add a checkbox to your html 
-	// use an if statement to see if the user has agreed to our terms and conditions
-	// Validate PW if time
-
-}
+    renderComments(); 
+    commentForm.reset();
+});
 
 
-const formEl = document.getElementById('commenter-form');
-
-formEl.addEventListener('submit', handleFormSubmit);
-
-renderCommenters();

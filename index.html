@@ -50,31 +50,36 @@
     </section>
 
     <section class="comments">
-        <h1 class="comments__convo">Join the Conversation</h1> 
+        <h2 class="comments__convo">Join the Conversation</h2> 
         <card class ="card">
             <img class = "card__image"src="/assets/Images/Mohan-muruge.jpg" alt ="picture of mohan">
-				<article class=" card__wrapper">
-                    <label class = "card__wrapper--name">
-                        NAME
-                        <input class = "card__wrapper--name--in" name="fullName" type="text" placeholder="Enter your name" required>
-                    </label>
-					<label class = "card__wrapper--comment">
-                        COMMENT
-                        <input class = "card__wrapper--comment--in" type="text" name="comment" placeholder="Add a new comment" required/>
-                    </label>
-                    <button type="submit" class="card__wrapper--btn">
-                        COMMENT
-                    </button>
-                </article>	
+				<form id="comment-form" class=" card__wrapper">
+                        <label class = "card__wrapper--name">
+                            NAME
+                            <input class = "card__wrapper--name--in" name="name" type="text" placeholder="Enter your name" required>
+                        </label>
+                        <label class = "card__wrapper--comment">
+                            COMMENT
+                            <input class = "card__wrapper--comment--in" type="text" name="comment" placeholder="Add a new comment" required/>
+                        </label>
+                        <button type="submit" class="card__wrapper--btn">
+                            COMMENT
+                        </button>
+                </form>
         </card>
     </section>
 
-    <section id="my-commenters"> 
+    <section>
+        
+        <div id="comment-list-container"></div>
+    </section>
+
+    <!-- <section id="my-commenters"> 
         <article class="commenter">
             <span> John Doe</span>
             <p> super duper whooper </p>
         </article>
-    </section>
+    </section> -->
 
     <footer class="foot">
         <h2>Get in Touch</h2>
