@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type= "text/css" href="/styles/shows.css">
+    <script src="/scripts/build-shows-page.js" defer></script>
     <title>shows page</title>
 </head>
+
 <body>
     <section class="nav">
-        <a href = "index.html" class="nav__logo">
+        <a href = "/index.html" class="nav__logo">
             <img src="/assets/logo/Logo-bandsite.svg" alt="band site logo">
         </a>
         <div class="nav__wrapper">
@@ -18,16 +20,40 @@
     </section>
 
     <section class="heroBanner">
-        <h3 class = "heroBanner__album"> Beautiful Beasts Album</h3>
-        <h1 class="heroBanner__title"> Stripes of Yellow x For the Stings </h1>
+        <div class="heroBanner__header">
+            <h3 class = "heroBanner__header--album"> Beautiful Beasts Album</h3>
+            <h1 class="heroBanner__header--title"> Stripes of Yellow x For the Stings </h1>
+        </div>
         <iframe class="heroBanner__sound" width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/828639601&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/glassanimals" title="Glass Animals" target="_blank" style="color: #cccccc; text-decoration: none;">Glass Animals</a> · <a href="https://soundcloud.com/glassanimals/heat-waves" title="Heat Waves" target="_blank" style="color: #cccccc; text-decoration: none;">Heat Waves</a></div>
     </section>
 
-    <section>
-        <h1 class="shows"> Shows </h1>
-        <card></card>
-    </section>
 
+        <!-- <div class="showList" id="show-container">
+            <div class = "showList__date">
+                <div class="showList__date--title"> DATE </div>
+                <div class="showList__date--details"> Mon Sept 09 2024</div>
+            </div>
+            <div class = "showList__venue">
+                <div class="showList__venue--title"> VENUE </div>
+                <div class="showList__venue--details"> Ronald Lane</div>
+            </div>
+            <div class = "showList__location">
+                <div class="showList__location--title"> LOCATION </div>
+                <div class="showList__location--details"> San Francisco, CA</div> 
+            </div>
+            <div class = "showList__btn">
+                <button type="submit" class="showList__btn--tix">
+                    BUY TICKETS
+                </button>
+            </div> -->
+
+
+
+        <!-- </div>
+
+    </section> -->
+    
+    <div id= "show-container"></div>
 
 
 

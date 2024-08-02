@@ -4,6 +4,7 @@
 
 a {
     text-decoration-line: none;
+    text-decoration: none;
 }
 
 .nav {
@@ -77,6 +78,7 @@ a {
             align-items: center;
             padding-top: 1rem;
             padding-bottom: 1rem;
+            color: $secondary-text-color;
 
             &:hover{
                 color: $primary-color-light-text;
@@ -106,6 +108,7 @@ a {
             align-items: center;
             padding-top: 1rem;
             padding-bottom: 1rem;
+            color: $secondary-text-color;
 
     
             &:hover{
