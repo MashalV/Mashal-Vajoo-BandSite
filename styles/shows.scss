@@ -40,35 +40,61 @@ html {
         background-size: cover;
         min-height: 1000px;
         max-height: 1400px;
-    }
-    
-    
-
-    &__title {
-        color: $primary-color-light-text;
-        display: flex; 
-        width: 60%;
-        justify-content: flex-start;
-        margin-left: 1rem;
-
-        @include tablet { 
-            margin: 2.25rem;  
-        }
-
-        @include desktop { 
-            margin: auto;
-            padding: 3.9375rem;  
-        }
-    }
-
-    &__album {
-        color: $primary-color-light-text;
         display: flex;
-        justify-content: flex-start;
-        margin-left: 1rem;
-        padding-top: 2rem;
-        padding-bottom: 1rem;
+        flex-direction:row;
+    }
 
+    &__header {
+
+        @include desktop {
+            display: flex;
+            flex-direction: column;
+            align-items:flex-start;
+            justify-content: center;
+            width: 100%;
+        }
+    
+    
+
+        &--title {
+            color: $primary-color-light-text;
+            display: flex; 
+            width: 60%;
+            justify-content: flex-start;
+            margin-left: 1rem;
+
+            @include tablet { 
+                width:70%;
+                margin: 0rem 2.25rem 0 2.25rem;  
+            }
+
+            @include desktop { 
+                padding-left: 3.9375rem;
+                width: 100%; 
+            }
+        }
+
+        &--album {
+            color: $primary-color-light-text;
+            display: flex;
+            justify-content: flex-start;
+            margin-left: 1rem;
+            padding-top: 2rem;
+            padding-bottom: 1rem;
+
+            @include tablet { 
+                margin: 2.25rem 2.25rem 0 2.25rem;  
+            }
+
+            @include desktop { 
+                padding-left: 3.9375rem;
+                // justify-content: center;
+                // align-content: center;
+                // align-items: center;
+
+            }
+
+        }
     }
 
 
@@ -78,6 +104,21 @@ html {
         padding-right: 2rem;
         padding-top: 1rem;
         padding-bottom: 1rem;
+
+        @include tablet { 
+            margin: 2.25rem;
+            width:55%;  
+        }
+
+        @include desktop { 
+            display: flex;
+            margin: auto;
+            // align-content:flex-end;
+            // justify-content: center;
+            // justify-content: flex-end;
+            padding: 3.9375rem; 
+            width:100%; 
+        }
     }
 }
 
@@ -85,4 +126,305 @@ html {
     display: flex;
     width:100%;
     margin: 1rem;
+    padding-top: 1rem;
+
+    @include tablet{
+        margin: 36px;
+    }
+    @include desktop {
+        margin-left: 64px;
+    }
 }
+
+.form {
+    padding: 1rem; 
+    border-bottom: 1px solid $secondary-text-color;
+
+    @include tablet {
+        display: flex;
+        // flex-direction: column;
+        justify-content: space-between;
+        width:100%;
+        // flex-wrap: wrap; 
+    }
+
+    &__group {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__details { 
+
+        @include tablet {
+                // display: flex;
+                // flex-direction: row;
+                // justify-content: space-between;
+                // width:100%;
+                // flex-wrap: wrap; 
+            }
+        
+    }
+
+    &__btn {
+        background-color: $primary-color-text;
+        color: $primary-color-light-text;
+        font-weight: 600;
+        font-size: 1rem;
+        border-radius: 0.3rem;
+        padding: 0.75rem;
+        width:100%;
+
+        @include tablet { 
+            // width: auto;
+            // margin-left: auto;
+            // align-self: flex-end;
+            // flex: 1 1 auto;
+
+        }
+    
+    }
+
+
+    &__title{
+        display: flex;
+        color: $secondary-text-color;
+        font-weight: 600;
+        font-size: 12px;
+        margin-bottom: 6px;
+
+        @include tablet {
+            font-size: .875rem;
+            line-height: 1.375rem;
+            // width: 22%;
+            display: flex;
+            margin-bottom: 0;
+        }
+    }
+
+    &__date{
+        display: flex;
+        font-weight: 600;
+        margin-bottom: 1rem;
+
+        @include tablet {
+            font-size: .875rem;
+            line-height: 1.375rem;
+            display: flex;
+            // width: 22%;
+            margin-bottom: 0;
+        }
+
+    }
+
+    &__venue{
+        margin-bottom: 1rem;
+
+        @include tablet {
+            font-size: .875rem;
+            line-height: 1.375rem;
+            // width: 22%;
+            display: flex;
+        }
+
+    }
+
+    &__location {
+        margin-bottom: 1rem;
+
+        @include tablet {
+            font-size: .875rem;
+            line-height: 1.375rem;
+            width: 22%;
+            display: flex;
+            margin-bottom: 0;
+        }
+
+    }
+
+}
+
+
+.showList {
+    padding:1rem;
+    border-bottom: 1px solid $secondary-text-color;
+
+    @include tablet{
+        display: flex;
+        justify-content: space-between;
+        margin:20px;
+    }
+    
+    @include desktop {
+        margin-left: 300px;
+        margin-right: 64px;
+    }
+
+    &__date{
+
+        &--title{
+            display: flex;
+            color: $secondary-text-color;
+            font-weight: 600;
+            font-size: 12px;
+            margin-bottom: 6px;
+
+            @include tablet {
+                font-size: .875rem;
+                line-height: 1.375rem;
+                // width: 22%;
+                display: flex;
+                margin-bottom: 1rem;
+            }
+
+        }
+        &--details{
+            display: flex;
+            font-weight: 600;
+            margin-bottom: 1rem;
+
+            @include tablet {
+                font-size: .875rem;
+                line-height: 1.375rem;
+                display: flex;
+                // width: 22%;
+                margin-bottom: 1rem;
+            }
+        }
+    }
+    &__venue{
+
+        &--title{
+            display: flex;
+            color: $secondary-text-color;
+            font-weight: 600;
+            font-size: 12px;
+            margin-bottom: 6px;
+
+            @include tablet {
+                font-size: .875rem;
+                line-height: 1.375rem;
+                // width: 22%;
+                display: flex;
+                margin-bottom: 1rem;
+            }
+
+        }
+        &--details{
+            margin-bottom: 1rem;
+
+            @include tablet {
+                font-size: .875rem;
+                line-height: 1.375rem;
+                // width: 22%;
+                display: flex;
+            
+            }
+        }
+    }
+
+    &__location{
+
+        &--title{
+            display: flex;
+            color: $secondary-text-color;
+            font-weight: 600;
+            font-size: 12px;
+            margin-bottom: 6px;
+
+            @include tablet {
+                font-size: .875rem;
+                line-height: 1.375rem;
+                // width: 22%;
+                display: flex;
+                margin-bottom: 1rem;
+            }
+
+        }
+        &--details{
+            margin-bottom: 1rem;
+
+            @include tablet {
+                font-size: .875rem;
+                line-height: 1.375rem;
+                // width: 22%;
+                display: flex;
+                margin-bottom: 0;
+                // align-items: center;
+
+            }
+            
+        }
+    }
+
+    &__btn {
+        display: flex;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        
+        @include tablet {
+            display:flex;
+            align-items:flex-end;
+            align-content: center;
+        }
+
+        &--tix{
+            background-color: $primary-color-text;
+            color: $primary-color-light-text;
+            font-weight: 600;
+            font-size: 1rem;
+            border-radius: 0.3rem;
+            padding: 0.75rem;
+            width:100%;
+            display: flex;
+            justify-content: center;
+            
+
+        }
+    }
+}
+
+    // &__details {
+
+    //     @include tablet {
+    //         display:flex;
+    //     }
+
+    //     &--title{
+    //         display: flex;
+    //         color: $secondary-text-color;
+    //         font-weight: 600;
+    //         font-size: 12px;
+    //         margin-bottom: 6px;
+    
+    //         @include tablet {
+    //             font-size: .875rem;
+    //             line-height: 1.375rem;
+    //         }
+    //     }
+    
+    //     &--date{
+    //         display: flex;
+    //         font-weight: 600;
+    //         margin-bottom: 1rem;
+    
+    //         @include tablet {
+    //             font-size: .875rem;
+    //             line-height: 1.375rem;
+    //         }
+    
+    //     }
+    
+    //     &--venue{
+    //         margin-bottom: 1rem;
+    
+    //     }
+    
+    //     &--location {
+    //         margin-bottom: 1rem;
+    
+    //     }
+    
+    // }
+
+// }
+

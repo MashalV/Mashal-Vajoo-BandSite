@@ -1,23 +1,17 @@
 @font-face {
   font-family: "AvenirNext LT Pro";
-  src: url("../../assets/fonts/AvenirNextLTPro-Bold.woff2") format("woff2"), url("../../assets/fonts/AvenirNextLTPro-Bold.woff") format("woff");
+  src: url("../assets/fonts/AvenirNextLTPro-Bold.woff2") format("woff2"), url("../assets/fonts/AvenirNextLTPro-Bold.woff") format("woff");
   font-weight: 700;
-  font-style: normal;
-  font-display: swap;
 }
 @font-face {
   font-family: "AvenirNext LT Pro";
-  src: url("../../assets/fonts/AvenirNextLTPro-Regular.woff2") format("woff2"), url("../../assets/fonts/AvenirNextLTPro-Regular.woff") format("woff");
+  src: url("../assets/fonts/AvenirNextLTPro-Regular.woff2") format("woff2"), url("../assets/fonts/AvenirNextLTPro-Regular.woff") format("woff");
   font-weight: 400;
-  font-style: normal;
-  font-display: swap;
 }
 @font-face {
   font-family: "AvenirNext LT Pro";
-  src: url("../../assets/fonts/AvenirNextLTPro-Demi.woff2") format("woff2"), url("../../assets/fonts/AvenirNextLTPro-Demi.woff") format("woff");
+  src: url("../assets/fonts/AvenirNextLTPro-Demi.woff2") format("woff2"), url("../assets/fonts/AvenirNextLTPro-Demi.woff") format("woff");
   font-weight: 600;
-  font-style: normal;
-  font-display: swap;
 }
 body {
   font-family: "AvenirNext LT Pro";
@@ -159,6 +153,7 @@ span {
 
 a {
   text-decoration-line: none;
+  text-decoration: none;
 }
 
 .nav {
@@ -241,6 +236,7 @@ a {
   align-items: center;
   padding-top: 1rem;
   padding-bottom: 1rem;
+  color: #AFAFAF;
 }
 .nav__wrapper--bio:hover {
   color: #FFF;
@@ -271,6 +267,7 @@ a {
   align-items: center;
   padding-top: 1rem;
   padding-bottom: 1rem;
+  color: #AFAFAF;
 }
 .nav__wrapper--shows:hover {
   color: #FFF;
@@ -532,6 +529,7 @@ a {
   align-items: center;
   padding-top: 1rem;
   padding-bottom: 1rem;
+  color: #AFAFAF;
 }
 .nav__wrapper--bio:hover {
   color: #FFF;
@@ -562,6 +560,7 @@ a {
   align-items: center;
   padding-top: 1rem;
   padding-bottom: 1rem;
+  color: #AFAFAF;
 }
 .nav__wrapper--shows:hover {
   color: #FFF;
@@ -947,6 +946,10 @@ a {
     justify-content: flex-end;
     align-self: flex-end;
   }
+}
+
+#comment-list-container {
+  padding: 0 5rem;
 }
 
 .comment {

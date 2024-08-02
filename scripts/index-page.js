@@ -77,10 +77,11 @@ commentForm.addEventListener ("submit", (e) => {
     const name = e.target.name.value;
     const comment = e.target.comment.value;
     const date = new Date().toLocaleDateString();
-    console.log("Name", name);
-    console.log("Comment", comment);
+    // console.log(date);
+    // console.log("Name", name);
+    // console.log("Comment", comment);
     const newComment = { Name: name, Comment: comment, Date: date }
-    comments.push(newComment);
+    comments.unshift(newComment);
 
 
     renderComments(); 

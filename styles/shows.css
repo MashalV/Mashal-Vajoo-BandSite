@@ -1,23 +1,17 @@
 @font-face {
   font-family: "AvenirNext LT Pro";
-  src: url("../../assets/fonts/AvenirNextLTPro-Bold.woff2") format("woff2"), url("../../assets/fonts/AvenirNextLTPro-Bold.woff") format("woff");
+  src: url("../assets/fonts/AvenirNextLTPro-Bold.woff2") format("woff2"), url("../assets/fonts/AvenirNextLTPro-Bold.woff") format("woff");
   font-weight: 700;
-  font-style: normal;
-  font-display: swap;
 }
 @font-face {
   font-family: "AvenirNext LT Pro";
-  src: url("../../assets/fonts/AvenirNextLTPro-Regular.woff2") format("woff2"), url("../../assets/fonts/AvenirNextLTPro-Regular.woff") format("woff");
+  src: url("../assets/fonts/AvenirNextLTPro-Regular.woff2") format("woff2"), url("../assets/fonts/AvenirNextLTPro-Regular.woff") format("woff");
   font-weight: 400;
-  font-style: normal;
-  font-display: swap;
 }
 @font-face {
   font-family: "AvenirNext LT Pro";
-  src: url("../../assets/fonts/AvenirNextLTPro-Demi.woff2") format("woff2"), url("../../assets/fonts/AvenirNextLTPro-Demi.woff") format("woff");
+  src: url("../assets/fonts/AvenirNextLTPro-Demi.woff2") format("woff2"), url("../assets/fonts/AvenirNextLTPro-Demi.woff") format("woff");
   font-weight: 600;
-  font-style: normal;
-  font-display: swap;
 }
 body {
   font-family: "AvenirNext LT Pro";
@@ -159,6 +153,7 @@ span {
 
 a {
   text-decoration-line: none;
+  text-decoration: none;
 }
 
 .nav {
@@ -241,6 +236,7 @@ a {
   align-items: center;
   padding-top: 1rem;
   padding-bottom: 1rem;
+  color: #AFAFAF;
 }
 .nav__wrapper--bio:hover {
   color: #FFF;
@@ -271,6 +267,7 @@ a {
   align-items: center;
   padding-top: 1rem;
   padding-bottom: 1rem;
+  color: #AFAFAF;
 }
 .nav__wrapper--shows:hover {
   color: #FFF;
@@ -478,9 +475,21 @@ a {
     background-size: cover;
     min-height: 1000px;
     max-height: 1400px;
+    display: flex;
+    flex-direction: row;
   }
 }
-.heroBanner__title {
+@media screen and (min-width: 80rem) {
+  .heroBanner__header {
+    transition: ease all 0.5s;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+  }
+}
+.heroBanner__header--title {
   color: #FFF;
   display: flex;
   width: 60%;
@@ -488,25 +497,38 @@ a {
   margin-left: 1rem;
 }
 @media screen and (min-width: 48rem) {
-  .heroBanner__title {
+  .heroBanner__header--title {
     transition: ease all 0.5s;
-    margin: 2.25rem;
+    width: 70%;
+    margin: 0rem 2.25rem 0 2.25rem;
   }
 }
 @media screen and (min-width: 80rem) {
-  .heroBanner__title {
+  .heroBanner__header--title {
     transition: ease all 0.5s;
-    margin: auto;
-    padding: 3.9375rem;
+    padding-left: 3.9375rem;
+    width: 100%;
   }
 }
-.heroBanner__album {
+.heroBanner__header--album {
   color: #FFF;
   display: flex;
   justify-content: flex-start;
   margin-left: 1rem;
   padding-top: 2rem;
   padding-bottom: 1rem;
+}
+@media screen and (min-width: 48rem) {
+  .heroBanner__header--album {
+    transition: ease all 0.5s;
+    margin: 2.25rem 2.25rem 0 2.25rem;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .heroBanner__header--album {
+    transition: ease all 0.5s;
+    padding-left: 3.9375rem;
+  }
 }
 .heroBanner__sound {
   width: 100%;
@@ -515,9 +537,257 @@ a {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
+@media screen and (min-width: 48rem) {
+  .heroBanner__sound {
+    transition: ease all 0.5s;
+    margin: 2.25rem;
+    width: 55%;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .heroBanner__sound {
+    transition: ease all 0.5s;
+    display: flex;
+    margin: auto;
+    padding: 3.9375rem;
+    width: 100%;
+  }
+}
 
 .shows {
   display: flex;
   width: 100%;
   margin: 1rem;
+  padding-top: 1rem;
+}
+@media screen and (min-width: 48rem) {
+  .shows {
+    transition: ease all 0.5s;
+    margin: 36px;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .shows {
+    transition: ease all 0.5s;
+    margin-left: 64px;
+  }
+}
+
+.form {
+  padding: 1rem;
+  border-bottom: 1px solid #AFAFAF;
+}
+@media screen and (min-width: 48rem) {
+  .form {
+    transition: ease all 0.5s;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+.form__group {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 48rem) {
+  .form__details {
+    transition: ease all 0.5s;
+  }
+}
+.form__btn {
+  background-color: #323232;
+  color: #FFF;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 0.3rem;
+  padding: 0.75rem;
+  width: 100%;
+}
+@media screen and (min-width: 48rem) {
+  .form__btn {
+    transition: ease all 0.5s;
+  }
+}
+.form__title {
+  display: flex;
+  color: #AFAFAF;
+  font-weight: 600;
+  font-size: 12px;
+  margin-bottom: 6px;
+}
+@media screen and (min-width: 48rem) {
+  .form__title {
+    transition: ease all 0.5s;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    display: flex;
+    margin-bottom: 0;
+  }
+}
+.form__date {
+  display: flex;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+@media screen and (min-width: 48rem) {
+  .form__date {
+    transition: ease all 0.5s;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    display: flex;
+    margin-bottom: 0;
+  }
+}
+.form__venue {
+  margin-bottom: 1rem;
+}
+@media screen and (min-width: 48rem) {
+  .form__venue {
+    transition: ease all 0.5s;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    display: flex;
+  }
+}
+.form__location {
+  margin-bottom: 1rem;
+}
+@media screen and (min-width: 48rem) {
+  .form__location {
+    transition: ease all 0.5s;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    width: 22%;
+    display: flex;
+    margin-bottom: 0;
+  }
+}
+
+.showList {
+  padding: 1rem;
+  border-bottom: 1px solid #AFAFAF;
+}
+@media screen and (min-width: 48rem) {
+  .showList {
+    transition: ease all 0.5s;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .showList {
+    transition: ease all 0.5s;
+    margin-left: 300px;
+    margin-right: 64px;
+  }
+}
+.showList__date--title {
+  display: flex;
+  color: #AFAFAF;
+  font-weight: 600;
+  font-size: 12px;
+  margin-bottom: 6px;
+}
+@media screen and (min-width: 48rem) {
+  .showList__date--title {
+    transition: ease all 0.5s;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    display: flex;
+    margin-bottom: 1rem;
+  }
+}
+.showList__date--details {
+  display: flex;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+@media screen and (min-width: 48rem) {
+  .showList__date--details {
+    transition: ease all 0.5s;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    display: flex;
+    margin-bottom: 1rem;
+  }
+}
+.showList__venue--title {
+  display: flex;
+  color: #AFAFAF;
+  font-weight: 600;
+  font-size: 12px;
+  margin-bottom: 6px;
+}
+@media screen and (min-width: 48rem) {
+  .showList__venue--title {
+    transition: ease all 0.5s;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    display: flex;
+    margin-bottom: 1rem;
+  }
+}
+.showList__venue--details {
+  margin-bottom: 1rem;
+}
+@media screen and (min-width: 48rem) {
+  .showList__venue--details {
+    transition: ease all 0.5s;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    display: flex;
+  }
+}
+.showList__location--title {
+  display: flex;
+  color: #AFAFAF;
+  font-weight: 600;
+  font-size: 12px;
+  margin-bottom: 6px;
+}
+@media screen and (min-width: 48rem) {
+  .showList__location--title {
+    transition: ease all 0.5s;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    display: flex;
+    margin-bottom: 1rem;
+  }
+}
+.showList__location--details {
+  margin-bottom: 1rem;
+}
+@media screen and (min-width: 48rem) {
+  .showList__location--details {
+    transition: ease all 0.5s;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    display: flex;
+    margin-bottom: 0;
+  }
+}
+.showList__btn {
+  display: flex;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+@media screen and (min-width: 48rem) {
+  .showList__btn {
+    transition: ease all 0.5s;
+    display: flex;
+    align-items: flex-end;
+    align-content: center;
+  }
+}
+.showList__btn--tix {
+  background-color: #323232;
+  color: #FFF;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 0.3rem;
+  padding: 0.75rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }/*# sourceMappingURL=shows.css.map */

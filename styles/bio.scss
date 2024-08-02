@@ -89,6 +89,7 @@ html {
             align-items: center;
             padding-top: 1rem;
             padding-bottom: 1rem;
+            color: $secondary-text-color;
 
             &:hover{
                 color: $primary-color-light-text;
@@ -118,6 +119,7 @@ html {
             align-items: center;
             padding-top: 1rem;
             padding-bottom: 1rem;
+            color: $secondary-text-color;
 
     
             &:hover{
@@ -505,6 +507,10 @@ html {
         
         }
     }
+}
+
+#comment-list-container {
+    padding: 0 5rem;
 }
 
 .comment {
