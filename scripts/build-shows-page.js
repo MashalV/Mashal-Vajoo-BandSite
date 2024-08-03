@@ -51,6 +51,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const dateTitleEl = createDiv ("showList__date--title", "DATE");
         dateEl.append(dateTitleEl); 
 
+        const dateTitleTabletEl = createDiv ("showList__date--titleTablet");
+        dateEl.append(dateTitleTabletEl); 
+
         const dateDetailsEl = createDiv ("showList__date--details", show.Date);
         dateEl.append(dateDetailsEl); 
 
@@ -59,6 +62,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const venueTitleEl = createDiv ("showList__venue--title", "VENUE");
         venueEl.append(venueTitleEl); 
+
+        const venueTitleTabletEl = createDiv ("showList__venue--titleTablet");
+        venueEl.append(venueTitleTabletEl); 
 
         const venueDetailsEl = createDiv ("showList__venue--details", show.Venue);
         venueEl.append(venueDetailsEl); 
@@ -69,13 +75,16 @@ document.addEventListener('DOMContentLoaded', () => {
         const locationTitleEl = createDiv ("showList__location--title", "LOCATION");
         locationEl.append(locationTitleEl); 
 
+        const locationTitleTabletEl = createDiv ("showList__location--titleTablet");
+        locationEl.append(locationTitleTabletEl); 
+
         const locationDetailsEl = createDiv ("showList__location--details", show.Location);
         locationEl.append(locationDetailsEl); 
 
         const btnEl = createDiv ("showList__btn");
         showListEl.append(btnEl);
         
-        const btnTixEl = createDiv ("showList__btn--tix", "GET TICKETS");
+        const btnTixEl = createDiv ("showList__btn--tix", "BUY TICKETS");
         btnEl.append(btnTixEl);
 
         showContainer.append(showListEl);

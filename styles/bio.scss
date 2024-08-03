@@ -374,6 +374,10 @@ html {
     flex-direction: row;
     width:100%;
 
+    @include desktop {
+        padding: 0 17rem;
+        }
+
     &__image {
         border-radius: 50%;
         max-width: 2.25rem;
@@ -381,11 +385,13 @@ html {
         display:flex;
         margin: 1rem;
         object-fit: cover;
+        margin-top: 30px;
+        margin-right:0;
 
 
         @include tablet {
             max-width: 3rem;
-            max-height:3rem;
+            max-height: 3rem;
         }
 
     }
@@ -405,14 +411,16 @@ html {
             padding: 1rem;
             width: 100%;
             
+            
 
             &--in{
+                height: 10%;
                 min-height: 2.25rem; 
                 width: 100%; 
                 border-radius: 0.25rem;
                 padding: 0.75rem;
                 border: 0.0625rem solid $secondary-text-color;
-                margin-top: 1rem;
+                margin-top: 4px;
                 background-color: $secondary-background-color;
                 
                 &::-webkit-input-placeholder {
@@ -434,7 +442,7 @@ html {
 
                 @include tablet {
                     min-height: 3rem;
-                    padding: 2.25rem;
+                    padding: 16px;
                 }
             }
         }
@@ -452,13 +460,14 @@ html {
 
             &--in{
 
-                min-height: 4.5rem; 
+                min-height: 2.25rem; 
                 width: 100%; 
                 border-radius: 0.25rem;
                 padding: 0.75rem;
                 border: 0.0625rem solid $secondary-text-color;
-                margin-top: 1rem;
+                margin-top: 4px;
                 background-color: $secondary-background-color;
+                padding-bottom: 48px;
 
                 &::-webkit-input-placeholder {
                     color: $primary-color-text;
@@ -494,14 +503,19 @@ html {
             font-style: normal;
             font-size: 1rem;
             font-family: 'AvenirNext LT Pro';
-            border-radius: 0.1875rem;
+            border-radius: 4px;
             margin: 16px;
             padding: 0.75rem;
+            height: 40px;
 
             @include tablet { 
                 display: flex;
                 justify-content: flex-end;
                 align-self: flex-end;
+                align-items: center;
+                min-width: 150px;
+                padding-left: 32px;
+                padding-right:32px;
 
             }
         
@@ -510,7 +524,9 @@ html {
 }
 
 #comment-list-container {
-    padding: 0 5rem;
+    @include desktop {
+    padding: 0 20rem;
+    }
 }
 
 .comment {
@@ -531,7 +547,8 @@ html {
     }
 
     @include desktop { 
-        margin: 3.9375rem;
+        margin-left: 3.9375rem;
+        margin-right: 3.9375rem;
         justify-content: center;
         align-content: center;
         align-self: center;
@@ -610,13 +627,18 @@ html {
     &__avatar {
         width: 100%;
         border-radius: 50%; 
-        background-color: $secondary-text-color;
+        background-color: $divider-line-color;
         display: flex;
         object-fit: cover;
         margin-right: 1rem;
         margin-top: 1rem;
         max-width: 2.25rem;
         max-height:2.25rem;
+
+        @include tablet {
+            max-width: 3rem;
+            max-height: 3rem;
+        }
     }
 }
 
