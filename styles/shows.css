@@ -487,6 +487,7 @@ a {
     align-items: flex-start;
     justify-content: center;
     width: 100%;
+    padding-right: 1.875rem;
   }
 }
 .heroBanner__header--title {
@@ -506,8 +507,9 @@ a {
 @media screen and (min-width: 80rem) {
   .heroBanner__header--title {
     transition: ease all 0.5s;
-    padding-left: 3.9375rem;
+    padding-left: 2.9375rem;
     width: 100%;
+    padding-bottom: 1rem;
   }
 }
 .heroBanner__header--album {
@@ -527,7 +529,7 @@ a {
 @media screen and (min-width: 80rem) {
   .heroBanner__header--album {
     transition: ease all 0.5s;
-    padding-left: 3.9375rem;
+    padding-left: 2.9375rem;
   }
 }
 .heroBanner__sound {
@@ -552,6 +554,8 @@ a {
     align-items: flex-end;
     width: 100%;
     margin-left: 5rem;
+    margin-top: 29rem;
+    margin-right: 1rem;
   }
 }
 
@@ -643,8 +647,9 @@ a {
 }
 
 .showList {
-  padding: 16px;
+  padding: 1rem 1rem 0 1rem;
   border-bottom: 0.0625rem solid #AFAFAF;
+  margin-bottom: 1rem;
 }
 @media screen and (min-width: 48rem) {
   .showList {
@@ -653,7 +658,7 @@ a {
     justify-content: space-between;
     padding: 0;
     padding-left: 16px;
-    margin: 1.5rem 1.125rem 1.5rem 1.125rem;
+    margin: 1.5rem 1.125rem 0.5rem 1.125rem;
   }
   .showList:hover {
     background-color: #FAFAFA;

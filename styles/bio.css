@@ -960,6 +960,7 @@ a {
     min-width: 150px;
     padding-left: 32px;
     padding-right: 32px;
+    height: auto;
   }
 }
 
