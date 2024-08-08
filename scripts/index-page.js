@@ -1,30 +1,33 @@
-const comments = [
-  {
-    Name: "Victor Pinto",
-    Comment:
-      "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.",
-    Date: "11/02/2023",
-  },
-  {
-    Name: "Christina Cabera",
-    Comment:
-      "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.",
-    Date: "10/28/2023",
-  },
-  {
-    Name: "Isaac Tadesse",
-    Comment:
-      "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.",
-    Date: "10/20/2023",
-  },
-];
-
+const commentList = []; 
 const commentContainer = document.getElementById("comment-list-container");
 const commentForm = document.getElementById("comment-form");
 
+const api = new BandSiteAPI("a265f27c-0b7a-40cc-8749-eb2b4ced6032"); 
+
+async function asyncCall (){
+
+    try {
+      const data = await api.getComments();
+      data.forEach (data => {
+        const commentInfo = {
+          name: data.name,
+          comment: data.comment,
+          timestamp: data.timestamp,
+        };
+        commentList.push(commentInfo);
+      });
+      renderComments();
+      
+    } catch (error) {
+      console.error(error);
+    }
+
+  };
+
+asyncCall (); 
 
 
-function displayComment(comment) {
+function displayComment(data) {
     const commentEl = createDiv("comment");
     
 
@@ -37,16 +40,16 @@ function displayComment(comment) {
     const boxEl = createDiv("comment__text--box");
     textEl.append(boxEl);
 
-    const nameEl = createDiv("comment__text--box--name", comment.Name);
+    const nameEl = createDiv("comment__text--box--name", data.name);
 
     boxEl.append(nameEl);
 
-    const dateEl = createDiv("comment__text--box--date", comment.Date);
+    const dateEl = createDiv("comment__text--box--date", new Date (data.timestamp).toLocaleDateString());
 
     boxEl.append(dateEl);
 
 
-    const detailsEl = createDiv("comment__text--details", comment.Comment);
+    const detailsEl = createDiv("comment__text--details", data.comment);
 
     textEl.append(detailsEl);
 
@@ -64,27 +67,35 @@ function createDiv(className, text = "") {
 
 
 function renderComments() { 
-    commentContainer.replaceChildren();
-    comments.sort((a,b) => new Date(b.Date)- new Date (a.Date));
-    comments.forEach(displayComment);
+    commentContainer.innerHTML = '';
+    commentList.sort((a,b) => new Date(b.Date)- new Date (a.Date));
+    commentList.forEach(displayComment);
 }
 
-renderComments(); 
 
-commentForm.addEventListener ("submit", (e) => {
-    e.preventDefault();
+commentForm.addEventListener ("submit", async (event) => {
+  event.preventDefault();
 
-    const name = e.target.name.value;
-    const comment = e.target.comment.value;
-    const date = new Date().toLocaleDateString();
-    // console.log(date);
-    // console.log("Name", name);
-    // console.log("Comment", comment);
-    const newComment = { Name: name, Comment: comment, Date: date }
-    comments.unshift(newComment);
+    const name = event.target.name.value;
+    const comment = event.target.comment.value;
+    const newComment = { name, comment };
+    
+
+    try {
+      const response = await api.postComments(newComment);
+      const createdComment = { 
+        name: response.name,
+        comment: response.comment,
+        timestamp: new Date().toLocaleDateString()
+      };
+      commentList.unshift(createdComment);
+      renderComments();
+
+    }catch (error) {
+      console.error(error);
+    }
 
 
-    renderComments(); 
     commentForm.reset();
 });
 

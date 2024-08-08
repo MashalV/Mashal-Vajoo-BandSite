@@ -1,4 +1,3 @@
-document.addEventListener('DOMContentLoaded', () => {
     const shows = [
     {
         Date: "Mon Sept 09 2024", 
@@ -94,11 +93,9 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log (showContainer);
 
     function renderShows() { 
-        // showContainer.replaceChildren();
         showContainer.innerHTML = '';
         shows.forEach(displayShows);
     }
 
 
     renderShows(); 
-});

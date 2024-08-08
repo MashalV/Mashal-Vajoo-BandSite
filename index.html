@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type= "text/css" href="/styles/bio.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="./scripts/index-page.js" defer ></script>
+    <script src="./scripts/band-site-api.js"></script>
     <title>bandsite bio</title>
 </head>
 
@@ -62,7 +64,7 @@
                             COMMENT
                             <input class = "card__wrapper--comment--in" type="text" name="comment" placeholder="Add a new comment" required/>
                         </label>
-                        <button type="submit" class="card__wrapper--btn">
+                        <button class="card__wrapper--btn">
                             COMMENT
                         </button>
                 </form>
@@ -74,12 +76,6 @@
         <div id="comment-list-container"></div>
     </section>
 
-    <!-- <section id="my-commenters"> 
-        <article class="commenter">
-            <span> John Doe</span>
-            <p> super duper whooper </p>
-        </article>
-    </section> -->
 
     <footer class="foot">
         <h2>Get in Touch</h2>
