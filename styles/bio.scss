@@ -64,7 +64,6 @@ html {
         color: $secondary-text-color;
         font-weight: 600;
         font-style: normal;
-        font-family: 'AvenirNext LT Pro';
         justify-content:flex-start;
         width: 100%;
         font-size: .875rem;
@@ -244,7 +243,7 @@ html {
         
         }
     }
-    & h3 {
+    &__header {
         @include tablet { 
             margin-left: 2.25rem; 
             margin-right: 2.25rem; 
@@ -255,7 +254,7 @@ html {
             width: 60%; 
         }
     }
-    & span {
+    &__details {
         padding-top: 16px;
 
         @include tablet { 
@@ -267,22 +266,9 @@ html {
         }
     
     }
-    & p {
-
-        @include tablet {  
-            margin-right: 1rem;
-            margin-top: 0px;
-        }
-
-        @include desktop {  
-            margin-right: 1rem;
-            padding-top: 0px;
-        }
-
-    }
         
 
-    & img {
+    &__image {
         height: auto;
         width: 100%; 
         padding-top: 1rem;
@@ -316,7 +302,7 @@ html {
     }
    
 
-    & h2 {
+    &__header {
         margin: 1rem;
         margin-top: 1rem;
         width:100%;
@@ -329,7 +315,7 @@ html {
         
     }
     
-    & img{
+    &__image {
         height: auto;
         width: 100%; 
         padding-top: 0px;
@@ -404,7 +390,6 @@ html {
             font-weight: 600;
             font-style: normal;
             font-size: 12px;
-            font-family: 'AvenirNext LT Pro';
             padding: 1rem;
             width: 100%;
             
@@ -425,7 +410,6 @@ html {
                     font-weight: 600;
                     font-style: normal;
                     font-size: 12px;
-                    font-family: 'AvenirNext LT Pro';
                 }
 
                 &:active {
@@ -450,7 +434,6 @@ html {
             font-weight: 600;
             font-style: normal;
             font-size: 12px;
-            font-family: 'AvenirNext LT Pro';
             padding-left: 1rem;
             padding-right: 1rem;
             
@@ -471,7 +454,6 @@ html {
                     font-weight: 600;
                     font-style: normal;
                     font-size: 12px;
-                    font-family: 'AvenirNext LT Pro';
                     display: flex;
                     align-items: flex-start;
                     
@@ -499,7 +481,6 @@ html {
             font-weight: 600;
             font-style: normal;
             font-size: 1rem;
-            font-family: 'AvenirNext LT Pro';
             border-radius: 4px;
             margin: 16px;
             padding: 0.75rem;
@@ -534,7 +515,6 @@ html {
     font-weight: 600;
     font-style: normal;
     font-size: 12px;
-    font-family: 'AvenirNext LT Pro';
     display: flex;
     flex-direction:row;
 
@@ -570,7 +550,6 @@ html {
                 font-weight: 600;
                 font-style: normal;
                 font-size: 12px;
-                font-family: 'AvenirNext LT Pro';
                 display: flex;
                 flex-direction: row;
                 width: 50%;
@@ -591,7 +570,6 @@ html {
                 font-weight: 400;
                 font-style: normal;
                 font-size: 12px;
-                font-family: 'AvenirNext LT Pro';
 
                 @include tablet {
                     font-size: .875rem;
@@ -601,7 +579,6 @@ html {
             }
 
         }
-        
 
         
         &__details {
@@ -610,7 +587,6 @@ html {
             font-weight: 400;
             font-style: normal;
             font-size: 12px;
-            font-family: 'AvenirNext LT Pro';
 
             @include tablet {
                 font-size: .875rem;
@@ -621,6 +597,8 @@ html {
         }
     }
     
+
+
 
     &__avatar {
         width: 100%;
@@ -657,14 +635,8 @@ html {
         padding: 3rem 3.9375rem 2.25rem 3.9375rem ; 
     }
 
-    & h2 {
+    &__header {
         color: $primary-color-light-text;
-    }
-
-    & p {
-        color: $primary-color-light-text;
-        padding-top: 1rem;
-        
     }
 
     &__icons {
@@ -688,7 +660,7 @@ html {
         }
 
 
-        &img {
+        &--image {
             display: flex;
             height: 1.4375rem;
             width: 1.4375rem;
