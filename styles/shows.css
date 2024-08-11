@@ -1,7 +1,7 @@
 @font-face {
   font-family: "AvenirNext LT Pro";
   src: url("../assets/fonts/AvenirNextLTPro-Bold.woff2") format("woff2"), url("../assets/fonts/AvenirNextLTPro-Bold.woff") format("woff");
-  font-weight: 700;
+  font-weight: 650;
 }
 @font-face {
   font-family: "AvenirNext LT Pro";
@@ -21,7 +21,7 @@ h1 {
   font-size: 1.5rem;
   line-height: 2rem;
   font-family: "AvenirNext LT Pro", "Times New Roman", Times, serif;
-  font-weight: 700;
+  font-weight: 550;
   color: #323232;
 }
 @media screen and (min-width: 48rem) {
@@ -483,10 +483,11 @@ a {
   .heroBanner {
     transition: ease all 0.5s;
     background-size: cover;
-    min-height: 1000px;
-    max-height: 1400px;
+    min-height: 700px;
+    max-height: 900px;
     display: flex;
     flex-direction: row;
+    background-position: center;
   }
 }
 @media screen and (min-width: 80rem) {
@@ -564,7 +565,7 @@ a {
     align-items: flex-end;
     width: 100%;
     margin-left: 5rem;
-    margin-top: 29rem;
+    margin-top: 20rem;
     margin-right: 1rem;
   }
 }

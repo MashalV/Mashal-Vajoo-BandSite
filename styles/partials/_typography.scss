@@ -5,7 +5,7 @@
     font-family: 'AvenirNext LT Pro';
     src: url('../assets/fonts/AvenirNextLTPro-Bold.woff2') format('woff2'),
         url('../assets/fonts/AvenirNextLTPro-Bold.woff') format('woff');
-    font-weight: 700;
+    font-weight: 650;
     
 }
 
@@ -34,7 +34,7 @@ h1 {
     font-size: 1.5rem;
     line-height: 2rem; 
     font-family: "AvenirNext LT Pro", 'Times New Roman', Times, serif;
-    font-weight: 700;
+    font-weight: 550;
     color: $primary-color-text;
 
     @include tablet {
