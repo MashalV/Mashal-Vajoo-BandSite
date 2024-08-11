@@ -14,13 +14,13 @@
   font-weight: 600;
 }
 body {
-  font-family: "AvenirNext LT Pro";
+  font-family: "AvenirNext LT Pro", "Times New Roman", Times, serif;
 }
 
 h1 {
   font-size: 1.5rem;
   line-height: 2rem;
-  font-family: "AvenirNext LT Pro";
+  font-family: "AvenirNext LT Pro", "Times New Roman", Times, serif;
   font-weight: 700;
   color: #323232;
 }
@@ -42,7 +42,7 @@ h1 {
 h2 {
   font-size: 1.5rem;
   line-height: 2rem;
-  font-family: "AvenirNext LT Pro";
+  font-family: "AvenirNext LT Pro", "Times New Roman", Times, serif;
   font-weight: 600;
   color: #323232;
 }
@@ -64,7 +64,7 @@ h2 {
 h3 {
   font-size: 0.875rem;
   line-height: 1.375rem;
-  font-family: "AvenirNext LT Pro";
+  font-family: "AvenirNext LT Pro", "Times New Roman", Times, serif;
   font-weight: 600;
   color: #323232;
 }
@@ -86,7 +86,7 @@ h3 {
 span {
   font-size: 0.875rem;
   line-height: 1.375rem;
-  font-family: "AvenirNext LT Pro";
+  font-family: "AvenirNext LT Pro", "Times New Roman", Times, serif;
   font-style: normal;
   font-weight: 600;
   color: #323232;
@@ -109,7 +109,7 @@ span {
 p {
   font-size: 0.8125rem;
   line-height: 1.125rem;
-  font-family: "AvenirNext LT Pro";
+  font-family: "AvenirNext LT Pro", "Times New Roman", Times, serif;
   font-weight: 400;
   color: #323232;
 }
@@ -146,7 +146,7 @@ p {
 span {
   font-size: 0.875rem;
   line-height: 1.375rem;
-  font-family: "AvenirNext LT Pro";
+  font-family: "AvenirNext LT Pro", "Times New Roman", Times, serif;
   font-weight: 600;
   color: #323232;
 }
@@ -177,6 +177,7 @@ a {
     transition: ease all 0.5s;
     display: flex;
     justify-content: left;
+    height: 5rem;
   }
 }
 .nav__logo {
@@ -200,6 +201,7 @@ a {
   .nav__logo {
     transition: ease all 0.5s;
     left: 3.9375rem;
+    top: 1rem;
   }
 }
 .nav__wrapper {
@@ -449,140 +451,12 @@ a {
   }
 }
 
-.nav {
-  background: #323232;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: 100%;
-}
-@media screen and (min-width: 48rem) {
-  .nav {
-    transition: ease all 0.5s;
-    display: flex;
-    height: auto;
-    flex-flow: row wrap;
-  }
-}
-@media screen and (min-width: 80rem) {
-  .nav {
-    transition: ease all 0.5s;
-    display: flex;
-    justify-content: left;
-  }
-}
-.nav__logo {
-  display: flex;
-  max-height: 1.25rem;
-  max-width: 7.5rem;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin-top: 1rem;
-}
-@media screen and (min-width: 48rem) {
-  .nav__logo {
-    transition: ease all 0.5s;
-    position: absolute;
-    left: 2.25rem;
-    top: 0.1875rem;
-  }
-}
-@media screen and (min-width: 80rem) {
-  .nav__logo {
-    transition: ease all 0.5s;
-    left: 3.9375rem;
-  }
-}
 .nav__wrapper {
-  display: flex;
-  color: #AFAFAF;
-  font-weight: 600;
-  font-style: normal;
-  font-family: "AvenirNext LT Pro";
-  justify-content: flex-start;
-  width: 100%;
-  font-size: 0.875rem;
-  line-height: 1.375rem;
-}
-@media screen and (min-width: 48rem) {
-  .nav__wrapper {
-    transition: ease all 0.5s;
-    display: flex;
-    height: auto;
-    width: 50%;
-    flex-flow: row wrap;
-  }
-}
-@media screen and (min-width: 80rem) {
-  .nav__wrapper {
-    transition: ease all 0.5s;
-    width: 50%;
-    justify-content: center;
-  }
+  height: 100%;
 }
 .nav__wrapper--bio {
-  display: flex;
-  width: 50%;
-  justify-content: center;
-  align-items: center;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  color: #AFAFAF;
-}
-.nav__wrapper--bio:hover {
   color: #FFF;
   border-bottom: 2px solid #FFF;
-}
-.nav__wrapper--bio:active {
-  color: #FFF;
-  border-bottom: 2px solid #FFF;
-  font-weight: bold;
-}
-@media screen and (min-width: 48rem) {
-  .nav__wrapper--bio {
-    transition: ease all 0.5s;
-    width: 33%;
-  }
-}
-@media screen and (min-width: 80rem) {
-  .nav__wrapper--bio {
-    transition: ease all 0.5s;
-    width: 17%;
-    justify-content: left;
-  }
-}
-.nav__wrapper--shows {
-  display: flex;
-  width: 50%;
-  justify-content: center;
-  align-items: center;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  color: #AFAFAF;
-}
-.nav__wrapper--shows:hover {
-  color: #FFF;
-  border-bottom: 2px solid #FFF;
-}
-.nav__wrapper--shows:active {
-  color: #FFF;
-  border-bottom: 2px solid #FFF;
-  font-weight: bold;
-}
-@media screen and (min-width: 48rem) {
-  .nav__wrapper--shows {
-    transition: ease all 0.5s;
-    width: 33%;
-  }
-}
-@media screen and (min-width: 80rem) {
-  .nav__wrapper--shows {
-    transition: ease all 0.5s;
-    width: 17%;
-    justify-content: left;
-  }
 }
 
 .heroBanner {
@@ -692,65 +566,51 @@ a {
   }
 }
 @media screen and (min-width: 48rem) {
-  .about h3 {
+  .about__header {
     transition: ease all 0.5s;
     margin-left: 2.25rem;
     margin-right: 2.25rem;
   }
 }
 @media screen and (min-width: 80rem) {
-  .about h3 {
+  .about__header {
     transition: ease all 0.5s;
     margin-left: 3.9375rem;
     margin-right: 3.9375rem;
     width: 60%;
   }
 }
-.about span {
+.about__details {
   padding-top: 16px;
 }
 @media screen and (min-width: 48rem) {
-  .about span {
+  .about__details {
     transition: ease all 0.5s;
     margin: 0rem 2.25rem 2.25rem 2.25rem;
   }
 }
 @media screen and (min-width: 80rem) {
-  .about span {
+  .about__details {
     transition: ease all 0.5s;
     margin-left: 3.9375rem;
     margin-right: 3.9375rem;
   }
 }
-@media screen and (min-width: 48rem) {
-  .about p {
-    transition: ease all 0.5s;
-    margin-right: 1rem;
-    margin-top: 0px;
-  }
-}
-@media screen and (min-width: 80rem) {
-  .about p {
-    transition: ease all 0.5s;
-    margin-right: 1rem;
-    padding-top: 0px;
-  }
-}
-.about img {
+.about__image {
   height: auto;
   width: 100%;
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
 @media screen and (min-width: 48rem) {
-  .about img {
+  .about__image {
     transition: ease all 0.5s;
     width: 100%;
     padding: 2.25rem;
   }
 }
 @media screen and (min-width: 80rem) {
-  .about img {
+  .about__image {
     transition: ease all 0.5s;
     padding: 2.25rem 3.9375rem;
   }
@@ -773,20 +633,20 @@ a {
     padding: 2.25rem 3.9375rem;
   }
 }
-.photo h2 {
+.photo__header {
   margin: 1rem;
   margin-top: 1rem;
   width: 100%;
 }
 @media screen and (min-width: 80rem) {
-  .photo h2 {
+  .photo__header {
     transition: ease all 0.5s;
     margin: 0px;
     padding-bottom: 2.25rem;
     padding-left: 1rem;
   }
 }
-.photo img {
+.photo__image {
   height: auto;
   width: 100%;
   padding-top: 0px;
@@ -794,14 +654,14 @@ a {
   padding-left: 1rem;
   padding-right: 1rem;
 }
-.photo img:not(:hover) {
+.photo__image:not(:hover) {
   filter: grayscale(1);
 }
-.photo img:hover {
+.photo__image:hover {
   filter: grayscale(0);
 }
 @media screen and (min-width: 48rem) {
-  .photo img {
+  .photo__image {
     transition: ease all 0.5s;
     width: 33%;
   }
@@ -863,7 +723,6 @@ a {
   font-weight: 600;
   font-style: normal;
   font-size: 12px;
-  font-family: "AvenirNext LT Pro";
   padding: 1rem;
   width: 100%;
 }
@@ -882,7 +741,6 @@ a {
   font-weight: 600;
   font-style: normal;
   font-size: 12px;
-  font-family: "AvenirNext LT Pro";
 }
 .card__wrapper--name--in:active {
   border: 0.0625rem solid #323232;
@@ -902,7 +760,6 @@ a {
   font-weight: 600;
   font-style: normal;
   font-size: 12px;
-  font-family: "AvenirNext LT Pro";
   padding-left: 1rem;
   padding-right: 1rem;
 }
@@ -921,7 +778,6 @@ a {
   font-weight: 600;
   font-style: normal;
   font-size: 12px;
-  font-family: "AvenirNext LT Pro";
   display: flex;
   align-items: flex-start;
 }
@@ -944,7 +800,6 @@ a {
   font-weight: 600;
   font-style: normal;
   font-size: 1rem;
-  font-family: "AvenirNext LT Pro";
   border-radius: 4px;
   margin: 16px;
   padding: 0.75rem;
@@ -978,7 +833,6 @@ a {
   font-weight: 600;
   font-style: normal;
   font-size: 12px;
-  font-family: "AvenirNext LT Pro";
   display: flex;
   flex-direction: row;
 }
@@ -1017,7 +871,6 @@ a {
   font-weight: 600;
   font-style: normal;
   font-size: 12px;
-  font-family: "AvenirNext LT Pro";
   display: flex;
   flex-direction: row;
   width: 50%;
@@ -1038,7 +891,6 @@ a {
   font-weight: 400;
   font-style: normal;
   font-size: 12px;
-  font-family: "AvenirNext LT Pro";
 }
 @media screen and (min-width: 48rem) {
   .comment__text--box--date {
@@ -1053,7 +905,6 @@ a {
   font-weight: 400;
   font-style: normal;
   font-size: 12px;
-  font-family: "AvenirNext LT Pro";
 }
 @media screen and (min-width: 48rem) {
   .comment__text__details {
@@ -1101,12 +952,8 @@ a {
     padding: 3rem 3.9375rem 2.25rem 3.9375rem;
   }
 }
-.foot h2 {
+.foot__header {
   color: #FFF;
-}
-.foot p {
-  color: #FFF;
-  padding-top: 1rem;
 }
 .foot__icons {
   margin: 1rem, 0;
@@ -1131,7 +978,7 @@ a {
     margin-left: 2.25rem;
   }
 }
-.foot__iconsimg {
+.foot__icons--image {
   display: flex;
   height: 1.4375rem;
   width: 1.4375rem;

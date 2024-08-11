@@ -14,13 +14,13 @@
   font-weight: 600;
 }
 body {
-  font-family: "AvenirNext LT Pro";
+  font-family: "AvenirNext LT Pro", "Times New Roman", Times, serif;
 }
 
 h1 {
   font-size: 1.5rem;
   line-height: 2rem;
-  font-family: "AvenirNext LT Pro";
+  font-family: "AvenirNext LT Pro", "Times New Roman", Times, serif;
   font-weight: 700;
   color: #323232;
 }
@@ -42,7 +42,7 @@ h1 {
 h2 {
   font-size: 1.5rem;
   line-height: 2rem;
-  font-family: "AvenirNext LT Pro";
+  font-family: "AvenirNext LT Pro", "Times New Roman", Times, serif;
   font-weight: 600;
   color: #323232;
 }
@@ -64,7 +64,7 @@ h2 {
 h3 {
   font-size: 0.875rem;
   line-height: 1.375rem;
-  font-family: "AvenirNext LT Pro";
+  font-family: "AvenirNext LT Pro", "Times New Roman", Times, serif;
   font-weight: 600;
   color: #323232;
 }
@@ -86,7 +86,7 @@ h3 {
 span {
   font-size: 0.875rem;
   line-height: 1.375rem;
-  font-family: "AvenirNext LT Pro";
+  font-family: "AvenirNext LT Pro", "Times New Roman", Times, serif;
   font-style: normal;
   font-weight: 600;
   color: #323232;
@@ -109,7 +109,7 @@ span {
 p {
   font-size: 0.8125rem;
   line-height: 1.125rem;
-  font-family: "AvenirNext LT Pro";
+  font-family: "AvenirNext LT Pro", "Times New Roman", Times, serif;
   font-weight: 400;
   color: #323232;
 }
@@ -146,7 +146,7 @@ p {
 span {
   font-size: 0.875rem;
   line-height: 1.375rem;
-  font-family: "AvenirNext LT Pro";
+  font-family: "AvenirNext LT Pro", "Times New Roman", Times, serif;
   font-weight: 600;
   color: #323232;
 }
@@ -177,6 +177,7 @@ a {
     transition: ease all 0.5s;
     display: flex;
     justify-content: left;
+    height: 5rem;
   }
 }
 .nav__logo {
@@ -200,6 +201,7 @@ a {
   .nav__logo {
     transition: ease all 0.5s;
     left: 3.9375rem;
+    top: 1rem;
   }
 }
 .nav__wrapper {
@@ -447,6 +449,14 @@ a {
     transition: ease all 0.5s;
     margin: auto;
   }
+}
+
+.nav__wrapper {
+  height: 100%;
+}
+.nav__wrapper--shows {
+  color: #FFF;
+  border-bottom: 2px solid #FFF;
 }
 
 .heroBanner {

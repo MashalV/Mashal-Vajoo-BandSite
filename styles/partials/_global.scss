@@ -24,6 +24,7 @@ a {
     @include desktop { 
             display: flex;
             justify-content:left;
+            height:5rem;
         }
 
 
@@ -45,6 +46,7 @@ a {
 
         @include desktop { 
             left:3.9375rem;
+            top: 1rem;
         }
     }
 

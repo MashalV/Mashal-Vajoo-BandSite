@@ -19,127 +19,16 @@ html {
 }
 
 .nav {
-    background: $primary-color-text;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-
-    @include tablet {
-        display: flex;
-        height: auto;
-        flex-flow: row wrap;
-    }
-
-    @include desktop { 
-            display: flex;
-            justify-content:left;
-        }
-
-
-    &__logo {
-
-        display: flex;
-        max-height: 1.25rem; 
-        max-width: 7.5rem;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        margin-top: 1rem;
-        
-        @include tablet { 
-            position: absolute;
-            left: 2.25rem;
-            top: 0.1875rem;
-        }
-
-        @include desktop { 
-            left:3.9375rem;
-        }
-    }
+    
 
     &__wrapper {
-        display: flex;
-        color: $secondary-text-color;
-        font-weight: 600;
-        font-style: normal;
-        justify-content:flex-start;
-        width: 100%;
-        font-size: .875rem;
-        line-height: 1.375rem;
-
-        @include tablet {
-            display: flex;
-            height: auto;
-            width:50%;
-            flex-flow: row wrap;
-        }
-
-        @include desktop { 
-            width: 50%;
-            justify-content:center;
-        }
+        height: 100%;
+        
 
         &--bio {
-            display: flex;
-            width: 50%;
-            justify-content: center;
-            align-items: center;
-            padding-top: 1rem;
-            padding-bottom: 1rem;
-            color: $secondary-text-color;
-
-            &:hover{
-                color: $primary-color-light-text;
-                border-bottom: 2px solid $primary-color-light-text;
-            }
-
-            &:active{
-                color: $primary-color-light-text;
-                border-bottom: 2px solid $primary-color-light-text;
-                font-weight: bold;
-            }
-
-            @include tablet { 
-                width:33%;
-            }
-
-            @include desktop { 
-                width: 17%;
-                justify-content: left;
-            }
+            color: $primary-color-light-text;
+            border-bottom: 2px solid $primary-color-light-text;
         
-        }
-        &--shows {
-            display: flex;
-            width: 50%;
-            justify-content: center;
-            align-items: center;
-            padding-top: 1rem;
-            padding-bottom: 1rem;
-            color: $secondary-text-color;
-
-    
-            &:hover{
-                color: $primary-color-light-text;
-                border-bottom: 2px solid $primary-color-light-text;
-            }
-
-            &:active{
-                color: $primary-color-light-text;
-                border-bottom: 2px solid $primary-color-light-text;
-                font-weight: bold;
-            }
-
-            @include tablet { 
-                width:33%;
-            }
-
-            @include desktop { 
-                width: 17%;
-                justify-content: left;
-            }
         }
 
     }

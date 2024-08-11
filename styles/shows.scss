@@ -17,6 +17,23 @@ html {
     }
 }
 
+.nav {
+    
+
+    &__wrapper {
+        height: 100%;
+        
+
+        &--shows {
+            color: $primary-color-light-text;
+            border-bottom: 2px solid $primary-color-light-text;
+        
+        }
+
+    }
+
+}
+
 .heroBanner {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("../assets/Images/hero-shows.jpg");
     background-size: cover;
