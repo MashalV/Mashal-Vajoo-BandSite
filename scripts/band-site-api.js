@@ -1,12 +1,3 @@
-// baseURL: https://unit-2-project-api-25c1595833b2.herokuapp.com/
-//{
-// "api_key": "a265f27c-0b7a-40cc-8749-eb2b4ced6032"
-// }
-// w key: ?api_key=<your_api_key_here>
-// get /comments brings comments array 
-// get /showdates brings show time objects
-// post /comments creates new commment 
-
 class BandSiteAPI { 
     constructor(key) {
         this.key = key; 
